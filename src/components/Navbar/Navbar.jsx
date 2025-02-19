@@ -1,12 +1,9 @@
 import "./Navbar.css";
-
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
-
-import logo from "/images/logo.png";
+import logo from "/images/rlogo.png";
 
 const Navbar = () => {
   const navLinkRef = useRef();
@@ -24,30 +21,24 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
-      <Link to="/">
-        <img src={logo} alt="" />
-      </Link>
+    <nav className="fixed">
+      <a href="https://rafflesuniversity.edu.in/" target="_blank" rel="noopener noreferrer">
+        <img 
+          src={logo} 
+          alt="Logo"
+          className="navbar-logo"
+        />
+      </a>
 
-      <div className="nav-links" id="navLinks" ref={navLinkRef}>
+      <div className="nav-links" ref={navLinkRef}>
         <FontAwesomeIcon icon={faTimes} className="fas" onClick={hideMenu} />
-
         <ul>
-          <li>
-            <Link to="/">HOME</Link>
-          </li>
-          <li>
-            <Link to="/about">ABOUT</Link>
-          </li>
-          <li>
-            <Link to="/course">COURSE</Link>
-          </li>
-          <li>
-            <Link to="/blog">BLOG</Link>
-          </li>
-          <li>
-            <Link to="/contact">CONTACT</Link>
-          </li>
+          <li><Link to="/" className="nav-item">HOME</Link></li>
+          <li><Link to="/about" className="nav-item">ABOUT UNIVERSITY</Link></li>
+          <li><Link to="/course" className="nav-item">CALL FOR PAPER</Link></li>
+          <li><Link to="/blog" className="nav-item">SCHEDULE</Link></li>
+          <li><Link to="/contact" className="nav-item">CONTACT</Link></li>
+          <li><Link to="/register" className="nav-item register-btn">REGISTER</Link></li>
         </ul>
       </div>
 

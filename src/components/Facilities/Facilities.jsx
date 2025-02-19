@@ -3,32 +3,49 @@ import "./Facilities.css";
 const Facilities = () => {
   return (
     <section className="facilities">
-      <h1>Our Facilities</h1>
-      <p>Immerse yourself in a world of exceptional amenities and services.</p>
+      <h1>GALLERY</h1>
       <div className="row">
         <div className="facilities-col">
-          <img src="/images/library.png" alt="" />
-          <h3>World Class Library</h3>
-          <p>
-            Dive into a sea of knowledge with our state-of-the-art library. An
-            oasis for intellectual exploration.
-          </p>
+          <img src="/images/eng.png" alt="" />
+          <div style={{
+            padding: "15px",
+            backgroundColor: "#fff",
+            borderRadius: "8px",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+            marginTop: "-20px",
+            position: "relative"
+          }}>
+            <h3>School of Engineering</h3>
+            <p>State-of-the-art engineering labs and research facilities equipped with modern technology and tools.</p>
+          </div>
         </div>
         <div className="facilities-col">
-          <img src="/images/basketball.png" alt="" />
-          <h3>Largest Play Ground</h3>
-          <p>
-            Unleash your energy on our expansive playground. A haven for sports
-            enthusiasts and active minds.
-          </p>
+          <img src="/images/law.png" alt="" />
+          <div style={{
+            padding: "15px", 
+            backgroundColor: "#fff",
+            borderRadius: "8px",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+            marginTop: "-20px",
+            position: "relative"
+          }}>
+            <h3>Prize Distribution</h3>
+            <p>Recognition and awards ceremony for outstanding research papers and presentations.</p>
+          </div>
         </div>
         <div className="facilities-col">
-          <img src="/images/cafeteria.png" alt="" />
-          <h3>Tasty and Healthy Food</h3>
-          <p>
-            Indulge your taste buds with our delightful and nutritious cuisine.
-            Fuel for both body and mind.
-          </p>
+          <img src="/images/audi.png" alt="" />
+          <div style={{
+            padding: "15px",
+            backgroundColor: "#fff", 
+            borderRadius: "8px",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+            marginTop: "-20px",
+            position: "relative"
+          }}>
+            <h3>Main Auditorium</h3>
+            <p>Spacious auditorium with advanced audio-visual systems for conferences and cultural events.</p>
+          </div>
         </div>
       </div>
     </section>

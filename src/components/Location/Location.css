@@ -1,9 +1,26 @@
 .location {
-  width: 80%;
-  margin: auto;
-  padding: 80px 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
 }
 
 .location iframe {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.location iframe:hover {
+  transform: scale(1.01);
+}
+
+@media (max-width: 700px) {
+  .location {
+    width: 95%;
+    padding: 20px 0;
+  }
+  
+  .location iframe {
+    height: 350px;
+  }
 }

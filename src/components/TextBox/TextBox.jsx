@@ -5,13 +5,28 @@ import "./TextBox.css";
 const TextBox = () => {
   return (
     <div className="text-box">
-      <h1>World&apos;s Biggest University</h1>
-      <p>
-        Making website is now one of the easiest thing in the world. You just
-        need to learn HTML, CSS, <br /> JavaScript and you are good to go.
+      <div style={{ marginTop: "60px" }}>
+        <h1>Two Days</h1>
+        <h1>International E-Conference on </h1>
+        <h1>Applications of Emerging Technologies in Science and Innovations</h1>
+        <h2>(AETSI-2025)</h2>
+        <p>
+          Organised by : School of Engineering and Technology <br />
+          Sponsored by : RAFFLES UNIVERSITY, Neemrana
+        </p>
+      </div>
+      <p style={{ 
+        border: "1px solid #fff", 
+        padding: "10px", 
+        display: "inline-block",
+        marginTop: "20px",
+        marginBottom: "20px"
+      }}>
+        Date: 10th - 11th march 2025
       </p>
-      <Link to="/" className="hero-btn">
-        Visit us To Know More
+      
+      <Link to="/register" className="hero-btn">
+        Register Now
       </Link>
     </div>
   );

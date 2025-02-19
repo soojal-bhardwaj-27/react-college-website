@@ -14,11 +14,16 @@
   flex-basis: 44%;
   border-radius: 10px;
   margin-bottom: 5%;
-  text-align: left;
+  text-align: center;
   background: #fff3f3;
   padding: 25px;
   cursor: pointer;
-  display: flex;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+
+.testimonial-col:hover {
+  transform: translateY(-10px);
 }
 
 .testimonial-col img {
@@ -36,8 +41,15 @@
 
 .testimonial-col h3 {
   margin-top: 15px;
-  text-align: left;
-  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #222;
+}
+
+.designation {
+  color: #777;
+  margin-top: 5px;
+  font-style: italic;
 }
 
 .stars {

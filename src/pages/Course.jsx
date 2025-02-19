@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 const Course = () => {
   return (
     <>
-      <Subheader header="Our Courses" />
+      <Subheader header="AUTHOR GUIDELINES" />
       <Courses />
       <Facilities />
       <Footer />

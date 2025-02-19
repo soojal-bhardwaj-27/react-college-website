@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import "./AboutUsBox.css";
 
 const AboutUsBox = () => {
@@ -7,21 +5,37 @@ const AboutUsBox = () => {
     <section className="about-us">
       <div className="row">
         <div className="about-col">
-          <h1>We are the world&apos;s largest university</h1>
+          <h1>Message from the Convener</h1>
           <p>
-            At our unviersity, we take pride in fostering a culture where
-            excellence seamlessly interwines with education. Our unwavering
-            commitment to delivering a standard of education that exceeds
-            expectations os what sets up apart. We believe in the power of
-            transformative learning experiences, providing students with the
-            skills and knwoledge to thrive n a dynamic world.
+            As the Professor of the School of Engineering and Technology and Convener of AETSI-2025, 
+            I am delighted to welcome you to this international conference. In today's rapidly evolving 
+            technological landscape, it is crucial that we create platforms for sharing cutting-edge research 
+            and innovations. AETSI-2025 aims to bring together researchers, academicians, and industry experts 
+            to exchange ideas and foster collaborations that will shape the future of technology.
+            We look forward to your valuable contributions and participation in making this conference 
+            a great success.
           </p>
-          <Link to="#" className="hero-btn red-btn">
-            EXPLORE NOW
-          </Link>
+          <p style={{marginTop: "20px", fontWeight: "bold"}}>
+            Dr. Jaspreet Hira<br/> 
+            Convener, AETSI-2025<br/>
+            Professor, School of Engineering and Technology<br/>
+            Raffles University, Neemrana
+          </p>
         </div>
-        <div className="about-col">
-          <img src="images/about.jpg" alt="" />
+        <div className="about-col" style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+          <img 
+            src="/images/deansir.jpg" 
+            alt="Dr. Jaspreet Hira - convener" 
+            style={{
+              width: "300px",
+              height: "450px",
+              objectFit: "cover",
+              borderRadius: "10px",
+              boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
+            }}
+          />
+          <h3 style={{marginTop: "20px", textAlign: "center"}}>Prof (Dr.) Jaspreet Hira <br/> Convener AETSI-2025 <br/></h3> 
+          <p style={{textAlign: "center", color: "#666"}}> School of Engineering and Technology</p>
         </div>
       </div>
     </section>

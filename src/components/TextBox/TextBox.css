@@ -6,15 +6,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 2;
 }
 
 .text-box h1 {
-  font-size: 5.2rem;
+  font-size: 62px;
+  margin-bottom: 10px;
+}
+
+.text-box h2 {
+  font-size: 40px;
+  margin: 20px 0;
 }
 
 .text-box p {
   margin: 10px 0 40px;
-  font-size: 1.3rem;
+  font-size: 18px;
   color: #fff;
 }
 
@@ -24,20 +31,50 @@
   color: #fff;
   border: 1px solid #fff;
   padding: 12px 34px;
-  font-size: 1.2rem;
+  font-size: 13px;
   background: transparent;
   position: relative;
   cursor: pointer;
+  transition: 0.5s;
+  margin-top: 20px;
 }
 
 .hero-btn:hover {
   border: 1px solid #f44336;
   background: #f44336;
-  transition: 0.3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .text-box h1 {
-    font-size: 2rem;
+    font-size: 20px;
   }
+  .text-box h2 {
+    font-size: 16px;
+  }
+}
+
+/* Ensure navbar has higher z-index */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000 !important; /* Higher z-index for navbar */
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.nav-links {
+  position: relative;
+  z-index: 1001; /* Even higher z-index for nav links */
+}
+
+/* Ensure clickable areas are accessible */
+.nav-links ul li {
+  position: relative;
+  z-index: 1002;
+}
+
+.nav-links ul li a {
+  position: relative;
+  z-index: 1003;
+  pointer-events: auto !important;
 }

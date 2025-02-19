@@ -5,15 +5,19 @@ import About from "../pages/About";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
 import Course from "../pages/Course";
+import Register from "../components/Register/Register";
+import CallForPapers from "../pages/CallForPapers";
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route exact path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/course" element={<Course />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/call-for-papers" element={<CallForPapers />} />
     </Routes>
   );
 };

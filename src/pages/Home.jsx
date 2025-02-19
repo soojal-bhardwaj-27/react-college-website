@@ -1,19 +1,18 @@
-import Header from "../components/Header/Header";
-import Courses from "../components/Courses/Courses";
-import Facilities from "../components/Facilities/Facilities";
-import Cta from "../components/Cta/Cta";
-import Testimonials from "../components/Testimonials/Testimonials";
-import Footer from "../components/Footer/Footer";
+import React from 'react';
+import Header from '../components/Header/Header';
+import Campus from '../components/Campus/Campus';
+import Facilities from '../components/Facilities/Facilities';
+import Testimonials from '../components/Testimonials/Testimonials';
+import Cta from '../components/Cta/Cta';
 
 const Home = () => {
   return (
     <>
       <Header />
-      <Courses />
+      <Campus />
       <Facilities />
-      <Cta />
       <Testimonials />
-      <Footer />
+      <Cta />
     </>
   );
 };
