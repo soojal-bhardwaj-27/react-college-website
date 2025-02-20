@@ -5,6 +5,33 @@ const AboutUsBox = () => {
     <section className="about-us">
       <div className="row">
         <div className="about-col">
+          <h1>About Raffles University</h1>
+          <p>
+            Raffles University, established under the Raffles University, Neemrana Act, 2011, is a premier institution 
+            of higher learning committed to excellence in education. Located in Neemrana, Rajasthan, the university 
+            offers diverse programs across multiple disciplines including Engineering, Management, Law, and more. 
+            With state-of-the-art infrastructure and experienced faculty, we strive to provide quality education 
+            that prepares students for global challenges.
+          </p>
+          <a 
+            href="https://www.rafflesuniversity.edu.in" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="about-more-btn"
+            style={{
+              display: "inline-block",
+              padding: "12px 34px",
+              backgroundColor: "#f44336",
+              color: "white",
+              textDecoration: "none",
+              borderRadius: "5px",
+              marginTop: "20px",
+              marginBottom: "40px"
+            }}
+          >
+            ABOUT MORE
+          </a>
+
           <h1>Message from the Convener</h1>
           <p>
             As the Professor of the School of Engineering and Technology and Convener of AETSI-2025, 
