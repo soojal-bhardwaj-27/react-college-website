@@ -26,7 +26,7 @@ const Cta = () => {
         <h1 className="slide-up">
           (Join AETSI-2025)
           <br />
-          <span className="highlight">(Two Day International Conference on Application of Emerging Technologies
+          <span className="highlight">(Two Day National Conference on Application of Emerging Technologies
             in Science and Innovation)
             <h2>RAFFLES UNIVERSITY, NEEMRANA</h2>
           </span>
