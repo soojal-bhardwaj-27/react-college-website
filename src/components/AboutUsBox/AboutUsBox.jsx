@@ -32,6 +32,22 @@ const AboutUsBox = () => {
             ABOUT MORE
           </a>
 
+          <h1>Message from the Vice Chancellor</h1>
+          <p>
+            As the Vice Chancellor of Raffles University, I am proud to welcome you to AETSI-2025. 
+            Our institution has always been at the forefront of technological innovation and academic excellence. 
+            This international conference represents our commitment to fostering research, innovation, and 
+            collaboration across borders. I believe that through such platforms, we can create meaningful 
+            dialogue and drive positive change in the field of engineering and technology.
+            I extend my best wishes to all participants and look forward to the groundbreaking discussions 
+            and insights that will emerge from this conference.
+          </p>
+          <p style={{marginTop: "20px", fontWeight: "bold"}}>
+          President, Prof. (Dr.) Rajender Sangwan, FNA, FNASc, FNAAS<br/>
+            Vice Chancellor<br/>
+            Raffles University, Neemrana
+          </p>
+
           <h1>Message from the Convener</h1>
           <p>
             As the Professor of the School of Engineering and Technology and Convener of AETSI-2025, 
@@ -49,20 +65,51 @@ const AboutUsBox = () => {
             Raffles University, Neemrana
           </p>
         </div>
-        <div className="about-col" style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-          <img 
-            src="/images/deansir.jpg" 
-            alt="Dr. Jaspreet Hira - convener" 
-            style={{
-              width: "300px",
-              height: "450px",
-              objectFit: "cover",
-              borderRadius: "10px",
-              boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
-            }}
-          />
-          <h3 style={{marginTop: "20px", textAlign: "center"}}>Prof (Dr.) Jaspreet Hira <br/> Convener AETSI-2025 <br/></h3> 
-          <p style={{textAlign: "center", color: "#666"}}> School of Engineering and Technology</p>
+        <div className="about-col" style={{
+          display: "flex", 
+          flexDirection: "column", 
+          alignItems: "center", 
+          gap: "120px",  // Increased gap between images
+          marginTop: "280px"  // Adjusted to align with VC's message
+        }}>
+          <div className="profile-container">
+            <img 
+              src="/images/vcsir.jpg" 
+              alt="President, Prof. (Dr.) Rajender Sangwan" 
+              style={{
+                width: "300px",
+                height: "450px",
+                objectFit: "cover",
+                borderRadius: "10px",
+                border: "3px solid #f44336",
+                boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
+                padding: "5px",
+                backgroundColor: "white"
+              }}
+            />
+            <h3 style={{marginTop: "20px", textAlign: "center", color: "#333"}}>President, Prof. (Dr.) Rajender Sangwan<br/>Vice Chancellor</h3>
+            <p style={{textAlign: "center", color: "#666", fontStyle: "italic"}}>Raffles University</p>
+          </div>
+          <div className="profile-container" style={{
+            marginTop: "40px"  // Added extra margin to align with convener's message
+          }}>
+            <img 
+              src="/images/deansir.jpg" 
+              alt="Dr. Jaspreet Hira - convener" 
+              style={{
+                width: "300px",
+                height: "450px",
+                objectFit: "cover",
+                borderRadius: "10px",
+                border: "3px solid #f44336",
+                boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
+                padding: "5px",
+                backgroundColor: "white"
+              }}
+            />
+            <h3 style={{marginTop: "20px", textAlign: "center", color: "#333"}}>Prof (Dr.) Jaspreet Hira <br/> Convener AETSI-2025 <br/></h3> 
+            <p style={{textAlign: "center", color: "#666", fontStyle: "italic"}}>School of Engineering and Technology</p>
+          </div>
         </div>
       </div>
     </section>

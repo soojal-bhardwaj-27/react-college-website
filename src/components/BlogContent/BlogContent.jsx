@@ -14,6 +14,124 @@ const BlogContent = () => {
             textAlign: "center"
           }}>SPEAKER GUIDELINES</h2>
           
+          <div className="speaker-photos" style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "30px",
+            justifyContent: "center",
+            marginTop: "20px",
+            marginBottom: "40px"
+          }}>
+            <div className="speaker-card" style={{
+              width: "300px",
+              padding: "15px",
+              border: "2px solid #f44336",
+              borderRadius: "10px",
+              boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
+              backgroundColor: "white",
+              textAlign: "center"
+            }}>
+              <img 
+                src="/images/speaker1.jpg"
+                alt="Dr. John Smith"
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                  marginBottom: "15px"
+                }}
+              />
+              <h3 style={{color: "#333", marginBottom: "5px"}}> Dr. Satinderbal Gupta </h3>
+              <p style={{color: "#666", fontStyle: "italic"}}>Professor, Dept. of Computer Science & Engineering</p>
+              <p style={{fontSize: "0.9rem", marginTop: "10px"}}>
+              Indira Gandhi University, 
+              Meerpur, Rewari, Haryana
+              </p>
+            </div>
+
+            <div className="speaker-card" style={{
+              width: "300px", 
+              padding: "15px",
+              border: "2px solid #f44336",
+              borderRadius: "10px",
+              boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
+              backgroundColor: "white",
+              textAlign: "center"
+            }}>
+              <img 
+                src="/images/speaker2.jpg"
+                alt="Dr. Sarah Johnson"
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                  marginBottom: "15px"
+                }}
+              />
+              <h3 style={{color: "#333", marginBottom: "5px"}}>Dr. Rakesh Kumar</h3>
+              <p style={{color: "#666", fontStyle: "italic"}}>Professor, Dept. of Computer Science & Engineering</p>
+              <p style={{fontSize: "0.9rem", marginTop: "10px"}}>
+              Central University of Haryana, Pali, Haryana
+              </p>
+            </div>
+
+            <div className="speaker-card" style={{
+              width: "300px",
+              padding: "15px", 
+              border: "2px solid #f44336",
+              borderRadius: "10px",
+              boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
+              backgroundColor: "white",
+              textAlign: "center"
+            }}>
+              <img 
+                src="/images/speaker3.jpg"
+                alt="Prof. David Lee"
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                  marginBottom: "15px"
+                }}
+              />
+              <h3 style={{color: "#333", marginBottom: "5px"}}>Dr. Deepak Gupta</h3>
+              <p style={{color: "#666", fontStyle: "italic"}}>Professor, Dept. of Commerce</p>
+              <p style={{fontSize: "0.9rem", marginTop: "10px"}}>
+              Indira Gandhi University, Rewari, Haryana
+              </p>
+            </div>
+
+            <div className="speaker-card" style={{
+              width: "300px",
+              padding: "15px", 
+              border: "2px solid #f44336",
+              borderRadius: "10px",
+              boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
+              backgroundColor: "white",
+              textAlign: "center"
+            }}>
+              <img 
+                src="/images/speaker4.jpg"
+                alt="Dr. Emily Chen"
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                  marginBottom: "15px"
+                }}
+              />
+              <h3 style={{color: "#333", marginBottom: "5px"}}>Dr. Raj Kumar Yadav</h3>
+              <p style={{color: "#666", fontStyle: "italic"}}>Associate Professor, UIET</p>
+              <p style={{fontSize: "0.9rem", marginTop: "10px"}}>
+              Maharshi Dayanand University , Rohtak, Haryana
+              </p>
+            </div>
+          </div>
+          
           {/* Important Dates Table */}
           <div className="table-wrapper" style={{ marginBottom: "20px" }}>
             <h2 className="section-title" style={{
