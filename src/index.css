@@ -7,3 +7,27 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+/* Global Responsive Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Tablet Screens */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
