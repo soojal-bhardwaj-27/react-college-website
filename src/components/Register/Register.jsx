@@ -18,7 +18,15 @@ const Register = () => {
       {/* Message Card */}
       <div className="message-card">
         <h3>Important Notice</h3>
-        <p >GOOGLE form will be published after the acceptance of abstract.</p>
+        <p style={{ 
+          fontSize: "18px", 
+          fontWeight: "bold", 
+          color: "#d9534f", 
+          textAlign: "center",
+          marginTop: "10px" 
+        }}>
+          GOOGLE form will be published after the acceptance of abstract.
+        </p>
       </div>
     </div>
   );
