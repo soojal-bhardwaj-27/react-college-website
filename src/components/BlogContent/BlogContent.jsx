@@ -97,8 +97,8 @@ const BlogContent = () => {
                   marginBottom: "15px"
                 }}
               />
-              <h3 style={{color: "#333", marginBottom: "5px"}}>Dr. Deepak Gupta</h3>
-              <p style={{color: "#666", fontStyle: "italic"}}>Professor, Dept. of Commerce</p>
+              <h3 style={{color: "#333", marginBottom: "5px"}}> Dr. Savita Kumari Sheoran</h3>
+              <p style={{color: "#666", fontStyle: "italic"}}>Professor, Dept. of Computer Science & Engineering</p>
               <p style={{fontSize: "0.9rem", marginTop: "10px"}}>
               Indira Gandhi University, Rewari, Haryana
               </p>

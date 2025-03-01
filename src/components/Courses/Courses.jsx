@@ -5,6 +5,36 @@ const Courses = () => {
     <section className="course">
       <h1>PAPER SUBMISSION GUIDELINES</h1>
       <p style={{display: "table", margin: "0 auto", textAlign: "left"}}>
+<span style={{color: "#f44336", display: "table-row", marginBottom: "20px"}}>
+  <span style={{display: "table-cell", paddingRight: "10px", paddingBottom: "8px"}}>•</span>
+  <span style={{display: "table-cell"}}>Sample Abstract Format:</span>
+</span>
+<span style={{color: "#666", display: "table-row", fontSize: "0.9em", fontStyle: "italic"}}>
+  <span style={{display: "table-cell", paddingRight: "10px", paddingBottom: "15px"}}></span>
+  <span style={{display: "table-cell", paddingBottom: "15px"}}>
+   
+  </span>
+</span>
+<span style={{color: "#2196F3", display: "table-row", textAlign: "center"}}>
+  <span style={{display: "table-cell", paddingRight: "10px", paddingBottom: "8px"}}></span>
+  <span style={{display: "table-cell"}}>
+    <a 
+      href="/Abstract-Format.docx"
+      download 
+      style={{
+        color: "#fff",
+        backgroundColor: "#2196F3",
+        padding: "8px 15px",
+        borderRadius: "4px",
+        textDecoration: "none",
+        display: "inline-block",
+        marginTop: "10px"
+      }}
+    >
+      Download Paper Template
+    </a>
+  </span>
+</span>
         <span style={{color: "#f44336", display: "table-row"}}>
           <span style={{display: "table-cell", paddingRight: "10px", paddingBottom: "8px"}}>•</span>
           <span style={{display: "table-cell"}}>Paper length: Maximum 8 pages with A4 size sheets</span>

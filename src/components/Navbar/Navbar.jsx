@@ -1,27 +1,23 @@
 import "./Navbar.css";
-import { useRef } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "/images/rlogo.png";
 
 const Navbar = () => {
-  const navLinkRef = useRef();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const showMenu = () => {
-    if (navLinkRef.current) {
-      navLinkRef.current.style.right = "0";
-    }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const hideMenu = () => {
-    if (navLinkRef.current) {
-      navLinkRef.current.style.right = "-200px";
-    }
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
-    <nav className="fixed">
+    <nav className="navbar">
       <a href="https://rafflesuniversity.edu.in/" target="_blank" rel="noopener noreferrer">
         <img 
           src={logo} 
@@ -30,19 +26,19 @@ const Navbar = () => {
         />
       </a>
 
-      <div className="nav-links" ref={navLinkRef}>
-        <FontAwesomeIcon icon={faTimes} className="fas" onClick={hideMenu} />
+      <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+        <FontAwesomeIcon icon={faTimes} className="fas" onClick={closeMenu} />
         <ul>
-          <li><Link to="/" className="nav-item">HOME</Link></li>
-          <li><Link to="/about" className="nav-item">ABOUT UNIVERSITY</Link></li>
-          <li><Link to="/course" className="nav-item">CALL FOR PAPER</Link></li>
-          <li><Link to="/blog" className="nav-item">SCHEDULE</Link></li>
-          <li><Link to="/contact" className="nav-item">CONTACT</Link></li>
-          <li><Link to="/register" className="nav-item register-btn">REGISTER</Link></li>
+          <li><Link to="/" onClick={closeMenu}>HOME</Link></li>
+          <li><Link to="/about" onClick={closeMenu}>ABOUT UNIVERSITY</Link></li>
+          <li><Link to="/course" onClick={closeMenu}>CALL FOR PAPER</Link></li>
+          <li><Link to="/blog" onClick={closeMenu}>SCHEDULE</Link></li>
+          <li><Link to="/contact" onClick={closeMenu}>CONTACT</Link></li>
+          <li><Link to="/register" className="register-btn" onClick={closeMenu}>REGISTER</Link></li>
         </ul>
       </div>
 
-      <FontAwesomeIcon icon={faBars} className="fas" onClick={showMenu} />
+      <FontAwesomeIcon icon={faBars} className="fas" onClick={toggleMenu} />
     </nav>
   );
 };
