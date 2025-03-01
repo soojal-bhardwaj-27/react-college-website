@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +7,19 @@ import logo from "/images/rlogo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,8 +39,18 @@ const Navbar = () => {
         />
       </a>
 
+      {isMobile && (
+        <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+        </button>
+      )}
+
       <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-        <FontAwesomeIcon icon={faTimes} className="fas" onClick={closeMenu} />
+        {isMobile && (
+          <button className="close-menu" onClick={closeMenu} aria-label="Close menu">
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
+        )}
         <ul>
           <li><Link to="/" onClick={closeMenu}>HOME</Link></li>
           <li><Link to="/about" onClick={closeMenu}>ABOUT UNIVERSITY</Link></li>
@@ -37,8 +60,6 @@ const Navbar = () => {
           <li><Link to="/register" className="register-btn" onClick={closeMenu}>REGISTER</Link></li>
         </ul>
       </div>
-
-      <FontAwesomeIcon icon={faBars} className="fas" onClick={toggleMenu} />
     </nav>
   );
 };
