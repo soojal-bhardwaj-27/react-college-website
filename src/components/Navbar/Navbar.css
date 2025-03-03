@@ -81,19 +81,114 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   padding: 15px 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .navbar-logo {
   height: 50px;
   width: auto;
+  transition: transform 0.3s ease;
+}
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
 }
 
+.hamburger:hover {
+  color: #f44336;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    padding-top: 60px;
+    transition: 0.4s ease-in-out;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.nav-links ul li a:hover {
+  color: #f44336;
+  background: rgba(255, 255, 255, 0.1);
+}
+.register-btn {
+  background: #f44336;
+  padding: 10px 25px !important;
+  border-radius: 4px;
+  transition: all 0.3s ease !important;
+}
+.register-btn:hover {
+  background: #d32f2f !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+  color: white !important;
+}
+.hamburger,
+.close-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+.hamburger:hover,
+.close-menu:hover {
+  transform: scale(1.1);
+  color: #f44336;
+}
 .hamburger,
 .close-menu {
   display: none;
@@ -104,12 +199,10 @@ nav {
   cursor: pointer;
   padding: 8px;
 }
-
 .nav-links {
   display: flex;
   align-items: center;
 }
-
 .nav-links ul {
   display: flex;
   list-style: none;
@@ -117,7 +210,6 @@ nav {
   padding: 0;
   gap: 2rem;
 }
-
 .nav-links ul li a {
   color: white;
   text-decoration: none;
@@ -126,36 +218,29 @@ nav {
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
-
 .nav-links ul li a:hover {
   color: #f44336;
 }
-
 .register-btn {
   background: #f44336;
   padding: 8px 20px;
   border-radius: 4px;
   transition: background 0.3s ease;
 }
-
 .register-btn:hover {
   background: #d32f2f;
 }
-
 @media (max-width: 768px) {
   .navbar {
     padding: 12px 4%;
   }
-
-  .navbar-logo {
+.navbar-logo {
     height: 40px;
   }
-
-  .hamburger {
+.hamburger {
     display: block;
   }
-
-  .nav-links {
+.nav-links {
     position: fixed;
     top: 0;
     right: -100%;
@@ -166,45 +251,37 @@ nav {
     transition: 0.4s ease-in-out;
     overflow-y: auto;
   }
-
-  .nav-links.active {
+.nav-links.active {
     right: 0;
   }
-
-  .nav-links ul {
+.nav-links ul {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
   }
-
-  .nav-links ul li {
+.nav-links ul li {
     width: 100%;
     text-align: center;
   }
-
-  .close-menu {
+.close-menu {
     display: block;
     position: absolute;
     top: 15px;
     right: 15px;
   }
-
-  .register-btn {
+.register-btn {
     margin-top: 1rem;
     display: inline-block;
   }
 }
-
 @media (max-width: 480px) {
   .navbar {
     padding: 10px 4%;
   }
-
-  .navbar-logo {
+.navbar-logo {
     height: 35px;
   }
-
-  .nav-links {
+.nav-links {
     width: 100%;
   }
 }
@@ -214,24 +291,20 @@ nav .fas {
   font-size: 22px;
   cursor: pointer;
 }
-
 /* Mobile menu styles */
 @media (max-width: 700px) {
   nav {
     padding: 10px 4%;
   }
-
-  .navbar-logo {
+.navbar-logo {
     height: 50px;
   }
-
-  .nav-links ul li {
+.nav-links ul li {
     display: block;
     margin: 20px 0;
     text-align: center;
   }
-
-  .nav-links {
+.nav-links {
     position: fixed;
     background: #000;
     height: 100vh;
@@ -243,17 +316,14 @@ nav .fas {
     transition: 0.5s;
     padding-top: 60px;
   }
-
-  .nav-links ul {
+.nav-links ul {
     padding: 20px;
   }
-
-  nav .fas {
+nav .fas {
     display: block;
     margin: 10px;
   }
-
-  .nav-links .fas {
+.nav-links .fas {
     position: absolute;
     top: 20px;
     right: 20px;
